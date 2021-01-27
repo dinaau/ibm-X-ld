@@ -33,8 +33,11 @@ fetch(request)
 # 新cf加速
 
 
-const SingleDay = '域名'
-const DoubleDay = '域名'
+打开和复制脚本
+
+```
+const SingleDay = 'appname.herokuapp.com'
+const DoubleDay = 'appname.herokuapp.com'
 addEventListener(
     "fetch",event => {
     
@@ -53,3 +56,4 @@ addEventListener(
         )
     }
 )
+```
