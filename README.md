@@ -1,4 +1,4 @@
-# ibm-X
+# ibm-X-ld
 
 | Secrets变量 | 形式 |
   | --------------------- | ----------- |
@@ -28,3 +28,28 @@ fetch(request)
 )
 ```
 
+
+
+# 新cf加速
+
+
+const SingleDay = '域名'
+const DoubleDay = '域名'
+addEventListener(
+    "fetch",event => {
+    
+        let nd = new Date();
+        if (nd.getDate()%2) {
+            host = SingleDay
+        } else {
+            host = DoubleDay
+        }
+        
+        let url=new URL(event.request.url);
+        url.hostname=host;
+        let request=new Request(url,event.request);
+        event. respondWith(
+            fetch(request)
+        )
+    }
+)
